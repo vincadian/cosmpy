@@ -86,6 +86,16 @@ class NetworkConfig:
             staking_denomination="afet",
             faucet_url=None,
         )
+    @classmethod
+    def arkh_mainnet(cls) -> "NetworkConfig":
+        return NetworkConfig(
+            chain_id="arkh",
+            url="https://asc-dataseed.arkhadian.com/",
+            fee_minimum_gas_price=0,
+            fee_denomination="arkh",
+            staking_denomination="arkh",
+            faucet_url=None,
+        )
 
     @classmethod
     def fetch_mainnet(cls) -> "NetworkConfig":
